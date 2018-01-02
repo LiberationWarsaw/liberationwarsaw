@@ -18,9 +18,9 @@ class Event(models.Model):
     level = models.ManyToManyField('Level', blank=True)
     contact = models.EmailField(max_length=255)
 
-
     def __str__(self):
         return self.title
+
 
 class Level(models.Model):
     """
@@ -31,6 +31,7 @@ class Level(models.Model):
 
     def __str__(self):
         return self.title
+    
 
 class Tag(models.Model):
     """
