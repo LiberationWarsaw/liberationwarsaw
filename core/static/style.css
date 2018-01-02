@@ -468,18 +468,6 @@ nav a.active {
   }
 }
 
-#event-1, #event-3 {
-  border-right-color: #838383;
-  border-right-width: 3px;
-  border-right-style: solid;
-}
-
-#event-1, #event-2 {
-  border-bottom-color: #838383;
-  border-bottom-width: 3px;
-  border-bottom-style: solid;
-  margin-top:10px;
-}
 
 @media (max-width: 704px) {
   #event-3, #event-4 {

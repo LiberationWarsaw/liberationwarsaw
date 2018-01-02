@@ -19,54 +19,22 @@
 
     <div class="upcoming-events">
 
+    {% for event in upcoming_events %}
+
       <div class="event" id="event-1">
         <div class="calendar-icon"></div>
         <div class="event-details">
-          <h3>New Activist Orientation</h3>
-          <h4>Sunday, Jan 14th</h4>
-          <h4>1:00 pm - 4:00 pm</h4>
-          <a href="/events#event1" class="signup-button" id="event1">
+          <h3>{{ event.title }}</h3>
+          <h4>{{ event.start_time }}</h4>
+          <h4>{{ event.end_time }}</h4>
+          <a href="{{ event.url }}" class="signup-button" id="event1">
             <h3>View details</h3>
           </a>
         </div>
       </div>
 
+      {% endfor %}
 
-      <div class="event" id="event-2">
-        <div class="calendar-icon"></div>
-        <div class="event-details">
-          <h3>Slaughterhouse Vigil</h3>
-          <h4>Sunday, Jan 21st</h4>
-          <h4>12:00 pm - 3:00 pm</h4>
-          <a href="/events#event2" class="signup-button" id="event2">
-            <h3>View details</h3>
-          </a>
-        </div>
-      </div>
-
-      <div class="event" id="event-3">
-        <div class="calendar-icon"></div>
-        <div class="event-details">
-          <h3>Cube of Truth</h3>
-          <h4>TBD</h4>
-          <h4>TBD</h4>
-          <a href="/events#event3" class="signup-button" id="event3">
-            <h3>View details</h3>
-          </a>
-        </div>
-      </div>
-
-      <div class="event" id="event-4">
-        <div class="calendar-icon"></div>
-        <div class="event-details">
-          <h3>Day of Action</h3>
-          <h4>TBD</h4>
-          <h4>TBD</h4>
-          <a href="/events#event3" class="signup-button" id="event3">
-            <h3>View details</h3>
-          </a>
-        </div>
-      </div>
 
       <form method="post" id="subscribe-form" action="https://lists.liberationphilly.org/subscribe/campaigns">
         <input id="email-field" type="text" name="email" placeholder="yourname@email.com">
