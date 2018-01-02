@@ -10,15 +10,22 @@
 {% for event in object_list %}
 
 <a name="event1"></a>
-<div class ="event-page-item">
+<div class="event-page-item">
   <h3><a href="{{ event.url }}">{{ event.title }}</a></h3>
-  <h4>Date:</h4>{{ event.start_time }} - {{ event.end_time }}
+  <div class="event-info-section">
+    <h4>Date:</h4>
+    <p>{{ event.start_time }} - {{ event.end_time }}</p>
+  </div>
+  <div class="event-info-section">
   <h4>Location:</h4>
     <p>{{ event.address_title }}</p>
     <p>{{ event.address_street }}</p>
     <p>{{ event.address_city }}, {{ event.address_state}} {{ event.address_zip}}</p>
-  <h4>Description:</h4>
-  <p>{{ event.description }}</p>
+  </div>
+  <div class="event-info-section">
+    <h4>Description:</h4>
+    <p>{{ event.description }}</p>
+  </div>
 </div>
 
 {% endfor %}

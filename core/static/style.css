@@ -760,9 +760,12 @@ h3#form {
   margin-left: 40px;
 }
 
+.event-info-section {
+  margin: 20px auto;
+}
 
 .event-page-item p {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .social-icons {
