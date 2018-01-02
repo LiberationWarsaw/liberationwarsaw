@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
+from core.models import Event, Tag, Level
+from django.views.generic import ListView
 
 
 class HomePageView(TemplateView):
@@ -13,10 +15,11 @@ class AboutPageView(TemplateView):
     """
     template_name = 'core/about.html'
 
-class EventsPageView(TemplateView):
+class EventsListView(ListView):
     """
     """
-    template_name = 'core/events.html'
+    template_name = 'core/event-list.html'
+    model = Event
 
 class ContactPageView(TemplateView):
     """

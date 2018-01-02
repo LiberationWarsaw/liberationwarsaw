@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.HomePageView.as_view(), name='home'),
     path('about', views.AboutPageView.as_view(), name='about'),
-    path('events', views.EventsPageView.as_view(), name='events'),
+    path('events', views.EventsListView.as_view(), name='event-list'),
     path('contact', views.ContactPageView.as_view(), name='contact'),
     path('pledge', views.PledgePageView.as_view(), name='pledge'),
     path('rescue', views.RescuePageView.as_view(), name='rescue'),

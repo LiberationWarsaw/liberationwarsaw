@@ -1,0 +1,32 @@
+{% extends "core/_base.html" %}
+
+{% block title %}
+<div class"logo-word">Upcoming Events</div>
+{% endblock %}
+
+
+{% block content %}
+
+{% for event in object_list %}
+
+<a name="event1"></a>
+<div class ="event-page-item">
+  <h3><a href="{{ event.url }}">{{ event.title }}</a></h3>
+  <h4>Date:</h4>{{ event.start_time }} - {{ event.end_time }}
+  <h4>Location:</h4>
+    <p>{{ event.address_title }}</p>
+    <p>{{ event.address_street }}</p>
+    <p>{{ event.address_city }}, {{ event.address_state}} {{ event.address_zip}}</p>
+  <h4>Description:</h4>
+  <p>{{ event.description }}</p>
+</div>
+
+{% endfor %}
+
+<form method="post" id="subscribe-form" action="https://lists.liberationphilly.org/subscribe/campaigns">
+  <input id="email-field" type="text" name="email" placeholder="yourname@email.com">
+  <input class="subscribe-button" type="submit" value="Subscribe to events">
+</form>
+
+
+{% endblock %}
