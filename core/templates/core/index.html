@@ -27,8 +27,7 @@
         <div class="calendar-icon"></div>
         <div class="event-details">
           <h3>{{ event.title }}</h3>
-          <h4>{{ event.start_time }}</h4>
-          <h4>{{ event.end_time }}</h4>
+          <h4>{% format_dates start=event.start_time end=event.end_time multiline="true" %}</h4>
           <a href="{{ event.url }}" class="signup-button" id="event1">
             <h3>View details</h3>
           </a>
