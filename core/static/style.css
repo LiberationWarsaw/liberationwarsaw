@@ -306,15 +306,11 @@ nav a.active {
 }
 
 .upcoming-events {
-  background-color: #d9d9d9;
+  background-color: #F8F8F8;
   width: 95%;
   height: auto;
   margin: 0 auto;
   margin-bottom: 150px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 
 @media (max-width: 704px) {
@@ -332,12 +328,22 @@ nav a.active {
   }
 }
 
+.all-events {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .event {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   padding-left: 20px;
+  border: 2px solid #D3D3D3;
+  margin: 0px;
 }
 
 @media (max-width: 704px) {
@@ -444,8 +450,7 @@ nav a.active {
   border-radius: 4px;
 }
 
-.calendar-icon {
-  background-image: url(/static/images/calendar-icon.svg);
+.icon {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -456,27 +461,42 @@ nav a.active {
   margin-right: -12px;
 }
 
+.anonymous.icon {
+  background-image: url(/static/images/icons/anonymous.svg);
+}
+
+.calendar.icon {
+  background-image: url(/static/images/icons/training.svg);
+}
+
+.protest.icon {
+  background-image: url(/static/images/icons/protest.svg);
+}
+
+.save.icon {
+  background-image: url(/static/images/icons/save.svg);
+}
+
+.social.icon {
+  background-image: url(/static/images/icons/social.svg);
+}
+
+.training.icon {
+  background-image: url(/static/images/icons/training.svg);
+}
+
 @media (max-width: 704px) {
-  .calendar-icon {
+  .icon {
     display: none;
   }
 }
 
 @media (max-width: 800px) {
-  .calendar-icon {
+  .icon {
     display: none;
   }
 }
 
-
-@media (max-width: 704px) {
-  #event-3, #event-4 {
-    border: none;
-
-
-    display: none;
-  }
-}
 
 @media (max-width: 704px) {
   #event-1 {

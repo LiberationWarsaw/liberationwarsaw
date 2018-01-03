@@ -17,6 +17,21 @@ class Event(models.Model):
     tags = models.ManyToManyField('Tag', blank=True)
     level = models.ManyToManyField('Level', blank=True)
     contact = models.EmailField(max_length=255)
+    image = models.ImageField(blank=True)
+    ICON_CHOICES = (
+        ('calendar', 'Calendar'),
+        ('save', 'Save'),
+        ('cube', 'Cube'),
+        ('protest', 'Protest'),
+        ('training', 'Training'),
+        ('social', 'Social'),
+    )
+    icon = models.CharField(
+        max_length=255,
+        choices=ICON_CHOICES,
+        default='calendar',
+    )
+
 
     def __str__(self):
         return self.title

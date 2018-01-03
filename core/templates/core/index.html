@@ -21,21 +21,20 @@
 
     <div class="upcoming-events">
 
-    {% for event in upcoming_events %}
-
-      <div class="event" id="event-1">
-        <div class="calendar-icon"></div>
-        <div class="event-details">
-          <h3>{{ event.title }}</h3>
-          <h4>{% format_dates start=event.start_time end=event.end_time multiline="true" %}</h4>
-          <a href="{{ event.url }}" class="signup-button" id="event1">
-            <h3>View details</h3>
-          </a>
+    <div class="all-events">
+      {% for event in upcoming_events %}
+        <div class="event" id="event-1">
+          <div class="{{ event.icon }} icon"></div>
+          <div class="event-details">
+            <h3>{{ event.title }}</h3>
+            <h4>{% format_dates start=event.start_time end=event.end_time multiline="true" %}</h4>
+            <a href="{{ event.url }}" class="signup-button" id="event1">
+              <h3>View details</h3>
+            </a>
+          </div>
         </div>
+        {% endfor %}
       </div>
-
-      {% endfor %}
-
 
       <form method="post" id="subscribe-form" action="https://lists.liberationphilly.org/subscribe/campaigns">
         <input id="email-field" type="text" name="email" placeholder="yourname@email.com">
