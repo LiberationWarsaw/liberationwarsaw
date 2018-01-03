@@ -17,8 +17,8 @@ def format_dates(start, end, multiline=False):
             template_string = "{date}<br>{start_time} – {end_time}"
         return mark_safe(template_string.format(
             date=start.date().strftime(date_format),
-            start_time=start.time().strftime(time_format),
-            end_time=end.time().strftime(time_format)
+            start_time=start.time().strftime(time_format).lower(),
+            end_time=end.time().strftime(time_format).lower()
         ))
 
     elif (end.date() - start.date()).seconds <= 24*60*60:
@@ -32,9 +32,9 @@ def format_dates(start, end, multiline=False):
             template_string = "{start_date}, {start_time}<br>{end_date}, {end_time}"
         return mark_safe(template_string.format(
             start_date=start.date().strftime(date_format),
-            start_time=start.time().strftime(time_format),
+            start_time=start.time().strftime(time_format).lower(),
             end_date=end.date().strftime(date_format),
-            end_time=end.time().strftime(time_format),
+            end_time=end.time().strftime(time_format).lower(),
         ))
 
     else:
