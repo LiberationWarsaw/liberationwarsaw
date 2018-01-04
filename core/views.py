@@ -29,15 +29,13 @@ class AboutPageView(TemplateView):
 class EventsListView(ListView):
     """
     """
-    template_name = 'core/event-list.html'
     model = Event
+    context_object_name = 'upcoming_events'
 
-    def get_context_data(self, **kwargs):
-        context = super(EventsListView, self).get_context_data(**kwargs)
-        context['upcoming_events'] = Event.objects.filter(
+    def get_queryset(self):
+        return Event.objects.filter(
             start_time__gte=timezone.now()
         ).order_by('start_time')
-        return context
 
 
 class ContactPageView(TemplateView):
