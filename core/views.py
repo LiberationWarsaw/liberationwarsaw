@@ -16,7 +16,7 @@ class HomePageView(TemplateView):
         context = super(HomePageView, self).get_context_data(**kwargs)
         context['upcoming_events'] = Event.objects.filter(
             start_time__gte=timezone.now()
-        ).order_by('-start_time')[:4]
+        ).order_by('start_time')[:4]
         return context
 
 
@@ -31,6 +31,13 @@ class EventsListView(ListView):
     """
     template_name = 'core/event-list.html'
     model = Event
+
+    def get_context_data(self, **kwargs):
+        context = super(EventsListView, self).get_context_data(**kwargs)
+        context['upcoming_events'] = Event.objects.filter(
+            start_time__gte=timezone.now()
+        ).order_by('start_time')
+        return context
 
 
 class ContactPageView(TemplateView):
