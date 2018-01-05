@@ -21,6 +21,35 @@ body {
   padding-left: 20px;
 }
 
+
+.all-content {
+  display: flex;
+}
+
+@media (max-width: 750px) {
+  .all-content {
+    display: inline-block;
+  }
+}
+
+.primary-content {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+  margin-left:30px;
+  padding: 80px 0px;
+  background-color: #f2f2f2;
+  border-left: 2px solid #D3D3D3;
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 h1, h2 {
   font-family: 'Viga', sans-serif;
   letter-spacing: 2px;
@@ -405,6 +434,31 @@ nav a.active {
   .event h4 {
     font-size: 16px;
   }
+}
+
+.sidebar h3 {
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sidebar-event {
+  margin: 40px 20px 60px;
+  text-align: center;
+}
+
+.sidebar-event img {
+  width: 250px;
+}
+
+.sidebar-event h4 {
+  text-transform: uppercase;
+}
+
+.sidebar-event ul {
+  list-style: none;
+  text-align: left;
+  padding: 0px 20px;
 }
 
 .signup-button {
@@ -804,7 +858,6 @@ h3#form {
 
 footer {
   width: 100%;
-  margin-top: 50px;
   padding-bottom: 20px;
   background-color: #143ff4;
   color: white;
