@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'core',
 ]
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +54,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'liberationphilly.urls'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
 
 TEMPLATES = [
     {

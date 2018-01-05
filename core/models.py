@@ -1,3 +1,4 @@
+import os
 from django.db import models
 
 class Event(models.Model):
@@ -17,7 +18,7 @@ class Event(models.Model):
     tags = models.ManyToManyField('Tag', blank=True)
     level = models.ManyToManyField('Level', blank=True)
     contact = models.EmailField(max_length=255)
-    image = models.ImageField(blank=True)
+    image = models.ImageField(upload_to='uploads/', blank=True)
     ICON_CHOICES = (
         ('calendar', 'Calendar'),
         ('save', 'Save'),
