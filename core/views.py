@@ -3,6 +3,8 @@ from django.views.generic.base import TemplateView
 from core.models import Event, Tag, Level
 from django.views.generic import ListView
 from django.utils import timezone
+from django.db.models import Q
+
 
 
 
@@ -60,3 +62,12 @@ class SavePageView(TemplateView):
     """
     """
     template_name = 'core/save.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(SavePageView, self).get_context_data(**kwargs)
+        context['upcoming_events'] = Event.objects.filter(
+            start_time__gte=timezone.now()
+        ).filter(
+            Q(tags__title="Vigil") | Q(tags__title="Truck Stop")
+        ).order_by('start_time')[:3]
+        return context

@@ -475,6 +475,11 @@ nav a.active {
   display: block;
 }
 
+.sidebar-event .signup-button {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .signup-button h3 {
   font-size: 14px;
 }

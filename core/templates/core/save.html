@@ -1,4 +1,6 @@
 {% extends "core/_base.html" %}
+{% load liberationphilly %}
+
 
 {% block title %}
 <div class"logo-word">Philly Farmed Animal Save</div>
@@ -20,30 +22,24 @@
 
       <div class="sidebar">
         <h3>Upcoming Events</h3>
-        <div class="sidebar-event">
-          <img src="http://via.placeholder.com/350x150">
-          <h4>Slaughterhouse Vigil</h4>
-          <ul>
-            <li>Sunday, 1/21/18</li>
-            <li>1:00pm - 4:00pm</li>
-            <li>Saba Halal Live Poultry</li>
-          </ul>
-        </div>
 
-        <div class="sidebar-event">
-          <img src="http://via.placeholder.com/350x150">
-          <h4>Slaughterhouse Vigil</h4>
-          <ul>
-            <li>Sunday, 1/21/18</li>
-            <li>1:00pm - 4:00pm</li>
-            <li>Saba Halal Live Poultry</li>
-          </ul>
-        </div>
+        {% for event in upcoming_events %}
+          <div class="sidebar-event">
+            <img src="http://via.placeholder.com/350x150">
+            <h4>{{ event.title }}</h4>
+            <ul>
+              <li>{% format_dates start=event.start_time end=event.end_time multiline="true" %}</li>
+              <li>{{ event.address_title }}</li>
+            </ul>
+            <a href="{{ event.url }}" class="signup-button" id="event1">
+              <h3>View details</h3>
+            </a>
+          </div>
+        {% endfor %}
 
       </div>
 
   </div>
-
 </div>
 
 {% endblock %}
