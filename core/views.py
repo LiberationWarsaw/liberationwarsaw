@@ -1,9 +1,14 @@
+from django.http import HttpResponseRedirect
+from django.db.models import Q
+from django.utils import timezone
+from django.shortcuts import render
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from core.models import Event, Tag, Level
 from django.views.generic import ListView
-from django.utils import timezone
-from django.db.models import Q
+
+from core.models import Event, Tag, Level, Email
+
+from .forms import EmailForm
 
 
 class HomePageView(TemplateView):
@@ -17,7 +22,23 @@ class HomePageView(TemplateView):
         context['upcoming_events'] = Event.objects.filter(
             start_time__gte=timezone.now()
         ).order_by('start_time')[:4]
+
+        context['form'] = EmailForm()
+
         return context
+
+    def post(self, request):
+        # create a form instance and populate it with data from the request:
+        form = EmailForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            email = form.cleaned_data['email']
+            Email.objects.create(
+                email=email,
+            )
+            # redirect to a new URL:
+            return HttpResponseRedirect('/thanks/')
 
 
 class AboutPageView(TemplateView):

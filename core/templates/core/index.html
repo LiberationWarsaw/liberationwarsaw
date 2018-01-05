@@ -36,15 +36,11 @@
         {% endfor %}
       </div>
 
-      <form method="post" id="subscribe-form" action="https://lists.liberationphilly.org/subscribe/campaigns">
-        <input id="email-field" type="text" name="email" placeholder="yourname@email.com">
-        <input class="subscribe-button" type="submit" value="Subscribe to events">
+      <form action="" method="post">
+          {% csrf_token %}
+          {{ form }}
+          <input type="submit" value="Submit" />
       </form>
-
-      <div class="form_div" id="hidden_form">
-        <h3>Sign up for an Event</h3>
-        <div class="close" onclick="hideDiv()"><p>x</p></div>
-      </div>
 
     </div>
 

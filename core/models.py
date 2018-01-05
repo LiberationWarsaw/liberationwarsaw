@@ -57,3 +57,12 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.title
+
+class Email(models.Model):
+    """
+    A temporary way to collect emails from the sign up form until the email server gets fixed.
+    """
+    email = models.EmailField(max_length=255)
+
+    def __str__(self):
+        return self.email
