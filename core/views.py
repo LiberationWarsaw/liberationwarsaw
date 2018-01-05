@@ -6,8 +6,6 @@ from django.utils import timezone
 from django.db.models import Q
 
 
-
-
 class HomePageView(TemplateView):
     """
     Welcome screen with calls to action.
@@ -28,6 +26,27 @@ class AboutPageView(TemplateView):
     template_name = 'core/about.html'
 
 
+class AnonymousPageView(TemplateView):
+    """
+    """
+    template_name = 'core/anonymous.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(AnonymousPageView, self).get_context_data(**kwargs)
+        context['upcoming_events'] = Event.objects.filter(
+            start_time__gte=timezone.now()
+        ).filter(
+            tags__title="Cube"
+        ).order_by('start_time')[:3]
+        return context
+
+
+class ContactPageView(TemplateView):
+    """
+    """
+    template_name = 'core/contact.html'
+
+
 class EventsListView(ListView):
     """
     """
@@ -38,12 +57,6 @@ class EventsListView(ListView):
         return Event.objects.filter(
             start_time__gte=timezone.now()
         ).order_by('start_time')
-
-
-class ContactPageView(TemplateView):
-    """
-    """
-    template_name = 'core/contact.html'
 
 
 class PledgePageView(TemplateView):
