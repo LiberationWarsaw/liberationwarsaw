@@ -366,6 +366,13 @@ nav a.active {
   width: 100%;
 }
 
+@media (max-width: 704px) {
+  .all-events {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
 .event {
   display: flex;
   justify-content: center;
@@ -374,6 +381,7 @@ nav a.active {
   padding-left: 20px;
   border: 2px solid #D3D3D3;
   margin: 0px;
+  width: 300px;
 }
 
 @media (max-width: 704px) {
