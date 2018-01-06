@@ -17,11 +17,23 @@
         <input type="submit" value="Subscribe to Updates" class="subscribe-button"/>
     </form>
   </div>
-  
+
+  <h2>Upcoming Events</h2>
+
+  <div class="filter-section">
+    <h3>Filter by:</h3>
+    <ul class="filter-buttons">
+      <li onclick="clearFilters()" class="filter button">All</li>
+      <li onclick="filterEvents('.vigil')" class="filter button">Vigil</li>
+      <li onclick="filterEvents('.cube')" class="filter button">Anonymous</li>
+      <li onclick="filterEvents('.protest')" class="filter button">Protest</li>
+      <li onclick="filterEvents('.training')" class="filter button">Educational</li>
+    </ul>
+  </div>
+
   {% for event in object_list %}
 
-  <a name="event1"></a>
-  <div class="event-page-item">
+  <div class="event-page-item {% for tag in event.tags.all %}{{ tag.slug }}{% endfor %}">
     <h3><a href="{{ event.link }}" target="_blank">{{ event.title }}</a></h3>
     <div class="event-info-section">
       <h4>Date:</h4>
