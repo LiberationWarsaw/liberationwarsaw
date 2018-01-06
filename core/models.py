@@ -54,6 +54,7 @@ class Tag(models.Model):
     The types of action present at a particular event.
     """
     title = models.CharField(max_length=255)
+    slug = models.CharField(max_length=255)
 
     def __str__(self):
         return self.title

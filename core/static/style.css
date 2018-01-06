@@ -358,6 +358,14 @@ nav a.active {
   }
 }
 
+.event-page-item.inactive {
+  display: none;
+}
+
+li.filter {
+  cursor: pointer;
+}
+
 .all-events {
   display: flex;
   flex-wrap: wrap;
