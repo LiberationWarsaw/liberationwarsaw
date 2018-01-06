@@ -581,6 +581,7 @@ nav a.active {
   .subscribe-form {
     flex-direction: column;
     justify-content: center;
+    width: 100%
   }
 }
 
@@ -588,6 +589,13 @@ nav a.active {
     padding: 12px 20px;
     font-size: 16px;
     width: 50%;
+}
+
+@media (max-width: 704px) {
+  .subscribe-form input {
+      width: 80%;
+      margin-bottom: 10px;
+  }
 }
 
 
@@ -618,7 +626,7 @@ nav a.active {
 
 @media (max-width: 704px) {
   .subscribe-button {
-    width: 90%;
+    width: 100%;
   }
 }
 
