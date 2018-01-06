@@ -529,6 +529,40 @@ nav a.active {
   margin-right: -12px;
 }
 
+.photo-group {
+  display: flex;
+  wrap: wrap;
+  margin-top: -80px;
+  margin-bottom: 100px;
+  padding-left: 20px;
+}
+
+img.polaroid {
+  border-style: solid;
+  border-width: 10px;
+  border-color: #F9F9F9;
+  -ms-transform: rotate(-7deg); /* IE 9 */
+  -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+  transform: rotate(-7deg);
+  margin-right: 0px;
+  width: 15vw;
+  height: 15vw;
+  box-shadow: -2px 2px 2px #919191}
+
+@media (max-width: 705px) {
+  .polaroid {
+    display: none;
+  }
+}
+
+.photo-group img.polaroid:nth-child(even) {
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+  transform: rotate(7deg);
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px #919191
+}
+
 .cube.icon {
   background-image: url(/static/images/icons/anonymous.svg);
 }
