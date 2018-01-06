@@ -373,6 +373,10 @@ nav a.active {
   }
 }
 
+.event-page .email-form{
+  margin: 20px auto;
+}
+
 .event {
   display: flex;
   justify-content: center;

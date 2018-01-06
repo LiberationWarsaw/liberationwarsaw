@@ -74,10 +74,32 @@ class EventsListView(ListView):
     model = Event
     context_object_name = 'upcoming_events'
 
+    def get_context_data(self, **kwargs):
+        context = super(ListView, self).get_context_data(**kwargs)
+
+        context['form'] = EmailForm()
+
+        return context
+
     def get_queryset(self):
         return Event.objects.filter(
             start_time__gte=timezone.now()
         ).order_by('start_time')
+
+
+    def post(self, request):
+        # create a form instance and populate it with data from the request:
+        form = EmailForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            email = form.cleaned_data['email']
+            Email.objects.create(
+                email=email,
+            )
+            # redirect to a new URL:
+            return HttpResponseRedirect('/events')
+
 
 
 class PledgePageView(TemplateView):
