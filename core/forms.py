@@ -3,4 +3,4 @@ from .models import Email
 
 
 class EmailForm(forms.Form):
-    email = forms.CharField(label='Email', max_length=255)
+    email = forms.CharField(label='Email', initial='yourname@email.com', max_length=255)
