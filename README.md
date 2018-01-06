@@ -5,6 +5,7 @@ Liberation Philly
 
 A WIP website for Liberation Philly in Django. Contains events, email subscription field, and might cover more in the future.
 
+
 To run locally:
 
 ```
@@ -20,6 +21,7 @@ python3 manage.py runserver
 ```
 
 Note: some static images in the /photos folder have been gitignored. 
+
 
 To login to the admin site:
 
