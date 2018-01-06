@@ -38,7 +38,7 @@ class HomePageView(TemplateView):
                 email=email,
             )
             # redirect to a new URL:
-            return HttpResponseRedirect('/thanks/')
+            return HttpResponseRedirect('/')
 
 
 class AboutPageView(TemplateView):
