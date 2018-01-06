@@ -381,12 +381,12 @@ nav a.active {
   padding-left: 20px;
   border: 2px solid #D3D3D3;
   margin: 0px;
-  width: 300px;
 }
 
 @media (max-width: 704px) {
   .event {
     margin: 0px;
+    width: 300px;
     display: block;
     text-align: left;
   }
