@@ -358,12 +358,46 @@ nav a.active {
   }
 }
 
+
+.filter-section{
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.filter-section h3 {
+  display: inline-block;
+}
+
 .event-page-item.inactive {
   display: none;
 }
 
-li.filter {
+ul.filter-buttons {
+  display: inline-flex;
+  justify-content: flex-start;
+  padding-left: 0px;
+}
+
+li.filter.button {
   cursor: pointer;
+  color: white;
+  background-color: #143ff4;
+  font-size: 12px;
+  width: auto;
+  padding: 2px 10px 2px;
+  margin: 0px 5px;
+  text-decoration: none;
+  border-radius: 4px;
+  border-color: #143ff4;
+  border-style: solid;
+  cursor: pointer;
+  display: block;
+}
+li.filter.button:hover,
+li.filter.button.active {
+  color: #143ff4;
+  background-color: white;
+  border-radius: 4px;
 }
 
 .all-events {

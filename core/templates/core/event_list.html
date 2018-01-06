@@ -20,14 +20,16 @@
 
   <h2>Upcoming Events</h2>
 
-  <h3>Filter by:</h3>
-    <ul>
+  <div class="filter-section">
+    <h3>Filter by:</h3>
+    <ul class="filter-buttons">
       <li onclick="clearFilters()" class="filter button">All</li>
       <li onclick="filterEvents('.vigil')" class="filter button">Vigil</li>
       <li onclick="filterEvents('.cube')" class="filter button">Anonymous</li>
       <li onclick="filterEvents('.protest')" class="filter button">Protest</li>
       <li onclick="filterEvents('.training')" class="filter button">Educational</li>
     </ul>
+  </div>
 
   {% for event in object_list %}
 
