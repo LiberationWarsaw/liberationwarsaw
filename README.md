@@ -9,7 +9,7 @@ A WIP website for Liberation Philly in Django. Contains events, email subscripti
 To run locally:
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ```
