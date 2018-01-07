@@ -26,7 +26,7 @@ Note: some static images in the /photos folder have been gitignored.
 To login to the admin site:
 
 ```
-$ python manage.py createsuperuser
+$ python3 manage.py createsuperuser
 ```
 
 
