@@ -9,7 +9,7 @@ A WIP website for Liberation Philly in Django. Contains events, email subscripti
 To run locally:
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ```
@@ -26,7 +26,7 @@ Note: some static images in the /photos folder have been gitignored.
 To login to the admin site:
 
 ```
-$ python manage.py createsuperuser
+$ python3 manage.py createsuperuser
 ```
 
 
