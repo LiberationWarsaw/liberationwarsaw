@@ -393,6 +393,7 @@ li.filter.button {
   cursor: pointer;
   display: block;
 }
+
 li.filter.button:hover {
   color: #143ff4;
   background-color: white;
