@@ -21,28 +21,32 @@
 
     <div class="upcoming-events">
 
-      <div class="all-events">
-        {% for event in upcoming_events %}
-          <div class="event">
-            <div class="{{ event.icon }} icon"></div>
-            <div class="event-details">
-              <h3>{{ event.title }}</h3>
-              <h4>{% format_dates start=event.start_time end=event.end_time multiline="true" %}</h4>
-              <a href="{{ event.link }}" target="_blank" class="signup-button">
-              <h3>View details</h3>
-            </a>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
+      {% if upcoming_events|length != 0 %}
 
-      <div class="email-form">
-        <form action="" method="post" class="subscribe-form">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Subscribe to Updates" class="subscribe-button"/>
-        </form>
-      </div>
+        <div class="all-events">
+          {% for event in upcoming_events %}
+            <div class="event">
+              <div class="{{ event.icon }} icon"></div>
+              <div class="event-details">
+                <h3>{{ event.title }}</h3>
+                <h4>{% format_dates start=event.start_time end=event.end_time multiline="true" %}</h4>
+                <a href="{{ event.link }}" target="_blank" class="signup-button">
+                <h3>View details</h3>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="email-form">
+          <form action="" method="post" class="subscribe-form">
+              {% csrf_token %}
+              {{ form }}
+              <input type="submit" value="Subscribe to Updates" class="subscribe-button"/>
+          </form>
+        </div>
+
+      {% endif %}
 
     </div>
 
