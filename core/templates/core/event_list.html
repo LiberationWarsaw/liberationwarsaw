@@ -52,6 +52,11 @@
   </div>
 
   {% endfor %}
+
+  {% if object_list|length == 0 %}
+    <h4>Sorry, no upcoming events! Check back soon!</h4>
+  {% endif %}
+
 </div>
 
 {% endblock %}

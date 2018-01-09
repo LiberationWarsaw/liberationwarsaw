@@ -54,6 +54,12 @@
           </div>
         {% endfor %}
 
+        {% if upcoming_events|length == 0 %}
+        <div class="sidebar-event">
+          <h4>Sorry, no upcoming events! Check back soon!</h4>
+        </div>
+        {% endif %}
+
       </div>
 
   </div>
