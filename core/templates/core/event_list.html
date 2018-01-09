@@ -33,7 +33,7 @@
 
   {% for event in object_list %}
 
-  <div class="event-page-item {% for tag in event.tags.all %}{{ tag.slug }}{% endfor %}">
+  <div class="event-page-item {% for tag in event.tags.all %}{{ tag.slug }} {% endfor %}">
     <h3><a href="{{ event.link }}" target="_blank">{{ event.title }}</a></h3>
     <div class="event-info-section">
       <h4>Date:</h4>

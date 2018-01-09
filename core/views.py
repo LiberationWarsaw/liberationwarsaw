@@ -20,7 +20,7 @@ class HomePageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(HomePageView, self).get_context_data(**kwargs)
         context['upcoming_events'] = Event.objects.filter(
-            start_time__gte=timezone.now()
+            end_time__gte=timezone.now()
         ).order_by('start_time')[:4]
 
         context['form'] = EmailForm()
@@ -55,9 +55,9 @@ class AnonymousPageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(AnonymousPageView, self).get_context_data(**kwargs)
         context['upcoming_events'] = Event.objects.filter(
-            start_time__gte=timezone.now()
+            end_time__gte=timezone.now()
         ).filter(
-            tags__title="Cube"
+            tags__title="Cube of Truth"
         ).order_by('start_time')[:3]
         return context
 
@@ -83,7 +83,7 @@ class EventsListView(ListView):
 
     def get_queryset(self):
         return Event.objects.filter(
-            start_time__gte=timezone.now()
+            end_time__gte=timezone.now()
         ).order_by('start_time')
 
 
@@ -122,7 +122,7 @@ class SavePageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(SavePageView, self).get_context_data(**kwargs)
         context['upcoming_events'] = Event.objects.filter(
-            start_time__gte=timezone.now()
+            end_time__gte=timezone.now()
         ).filter(
             Q(tags__title="Vigil") | Q(tags__title="Truck Stop")
         ).order_by('start_time')[:3]
