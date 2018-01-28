@@ -1,5 +1,5 @@
-import os
 from django.db import models
+
 
 class Event(models.Model):
     """
@@ -33,7 +33,6 @@ class Event(models.Model):
         default='calendar',
     )
 
-
     def __str__(self):
         return self.title
 
@@ -59,9 +58,11 @@ class Tag(models.Model):
     def __str__(self):
         return self.title
 
+
 class Email(models.Model):
     """
-    A temporary way to collect emails from the sign up form until the email server gets fixed.
+    A temporary way to collect emails from the sign up form until the email
+    server gets fixed.
     """
     email = models.EmailField(max_length=255)
 
