@@ -1,13 +1,10 @@
 from django.http import HttpResponseRedirect
 from django.db.models import Q
 from django.utils import timezone
-from django.shortcuts import render
-from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView
 
-from core.models import Event, Tag, Level, Email
-
+from core.models import Event, Email
 from .forms import EmailForm
 
 
@@ -86,7 +83,6 @@ class EventsListView(ListView):
             end_time__gte=timezone.now()
         ).order_by('start_time')
 
-
     def post(self, request):
         # create a form instance and populate it with data from the request:
         form = EmailForm(request.POST)
@@ -99,7 +95,6 @@ class EventsListView(ListView):
             )
             # redirect to a new URL:
             return HttpResponseRedirect('/events')
-
 
 
 class PledgePageView(TemplateView):
