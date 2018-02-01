@@ -18,7 +18,7 @@ class Event(models.Model):
     link = models.URLField(max_length=255, blank=True)
     tags = models.ManyToManyField('Tag', blank=True)
     level = models.ForeignKey(
-        'Level', blank=True, on_delete=models.SET_NULL)
+        'Level', blank=True, on_delete=models.SET_NULL, null=True)
     contact = models.EmailField(max_length=255)
     image = models.ImageField(upload_to='uploads/', blank=True)
     ICON_CHOICES = (
@@ -68,7 +68,7 @@ class Attendance(models.Model):
     """
     Attendance
     """
-    event = models.ForeignKey('Events', on_delete=models.PROTECT)
+    event = models.ForeignKey('Event', on_delete=models.PROTECT)
     attendees = models.ManyToManyField('Activist', blank=True)
 
 
