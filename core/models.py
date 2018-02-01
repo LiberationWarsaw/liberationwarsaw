@@ -18,7 +18,7 @@ class Event(models.Model):
     link = models.URLField(max_length=255, blank=True)
     tags = models.ManyToManyField('Tag', blank=True)
     level = models.ForeignKey(
-        'RiskLevel', blank=True, on_delete=models.SET_NULL)
+        'Level', blank=True, on_delete=models.SET_NULL)
     contact = models.EmailField(max_length=255)
     image = models.ImageField(upload_to='uploads/', blank=True)
     ICON_CHOICES = (
@@ -72,7 +72,7 @@ class Attendance(models.Model):
     attendees = models.ManyToManyField('Activist', blank=True)
 
 
-class RiskLevel(models.Model):
+class Level(models.Model):
     """
     The risk levels for a particular event.
     """
