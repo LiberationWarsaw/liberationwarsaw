@@ -3,7 +3,7 @@ from django.db import models
 
 class Event(models.Model):
     """
-    A Liberation Philly event.
+    A Liberation Warsaw event.
     """
     title = models.CharField(max_length=255)
     start_time = models.DateTimeField()

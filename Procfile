@@ -1,1 +1,1 @@
-web: gunicorn liberationphilly.wsgi -b 0.0.0.0:5000
+web: gunicorn liberationwarsaw.wsgi -b 0.0.0.0:5000

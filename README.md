@@ -1,9 +1,9 @@
-Liberation Philly
+Liberation Warsaw
 =================
-[![Maintainability](https://api.codeclimate.com/v1/badges/222dd743841a45af937f/maintainability)](https://codeclimate.com/github/liberationphilly/django_site/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/222dd743841a45af937f/maintainability)](https://codeclimate.com/github/liberationwarsaw/django_site/maintainability)
 
 
-A WIP website for Liberation Philly in Django. Contains events, email subscription field, and might cover more in the future.
+A WIP website for Liberation Warsaw in Django. Contains events, email subscription field, and might cover more in the future.
 
 
 To run locally:
