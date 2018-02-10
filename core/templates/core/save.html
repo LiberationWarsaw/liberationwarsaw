@@ -3,7 +3,7 @@
 
 
 {% block title %}
-<div class"logo-word">Warsaw Farmed Animal Save</div>
+<div class"logo-word">Warsaw Animal Save</div>
 {% endblock %}
 
 
@@ -18,28 +18,24 @@
         <img src="/static/images/save-cover.jpg">
       </div>
 
-      <h2>About The Save Movement</h2>
+      <h2>Warsaw Animal Save</h2>
       <div class="about-save">
-        <p>The Save Movement is comprised of groups around the world who bear witness of pigs, cows, chickens and other farmed animals en route to slaughter. Our goals are to raise awareness about the plight of farmed animals, to help people become vegan, and to build a mass-based, grassroots animal justice movement. The Save Movement started in December 2010 with the inception of Toronto Pig Save. Today there are over 200 groups in Canada, the U.S., U.K. and Ireland, Australia, continental Europe, Hong Kong, and South America.</p>
-        <p>Warsaw Farmed Animal Save was founded in 2017 by Liberation Warsaw. If you would like to get involved, please contact Mary Kate at mkfain1@gmail.com</p>
+        <p>The Save Movement to międzynarodowa inicjatywa prozwierzęca, działająca w ponad 300 miejscach na świecie. Jesteśmy świadkami ostatniej drogi zwierząt przeznaczonych na rzeź. </p>
+        <p>Bycie świadkiem to przede wszystkim obecność. </p>
+        <p>W naszym milczącym proteście staramy się zwrócić zwierzętom ich indywidualność jako jednostek mających prawo do życia takie samo, jak każda inna istota. Stajemy przy nich, by zaświadczyć o ich cierpieniu oraz wyrazić swój sprzeciw wobec spotykającego je okrucieństwa. </p>
+        <p>Przybądźcie dać świadectwo naszej niezgody na uprzedmiotowienie krów, świń, kur oraz innych zwierząt ‘hodowlanych’. Spróbujmy z należną im godnością i szacunkiem pożegnać je u bram rzeźni. Będziemy czuwać w pobliżu miejsca, w którym są zabijane.</p>
+        <p>Nasza demonstracja ma charakter pokojowy; będziemy przebywać w miejscu publicznym, w granicach prawa. Z uwagi na zwierzęta nie będziemy wznosić żadnych okrzyków, będziemy milczącymi świadkami ich cierpienia. </p>
+        <p>Udostępnijcie światu historię tych zwierząt, tak aby ich tragedia nie dotykała już przyszłych pokoleń. Spójrzcie w oczy ofiarom, pokażcie, że nie jesteście obojętni!</p>
+
+        <p>Tutaj dowiedz się więcej o <a href="http://thesavemovement.org/">The Save Movement</a>.</p>
+
         </div>
 
-        <h2>Campaigns</h2>
-        <div class="about-save">
-          <!--FIXME: Reminder to update this as campaigns change -->
-          <p>Warsaw Farmed Animal Save aims to shut down all slaughterhouses in Warsaw in five years. There are currently 5 known live markets in the city that hold non-human animals captive until a consumer chooses to purchase them, at which time they are slaughtered. We have recently concluded a round of three vigils at the Kensington location of <a href="https://www.youtube.com/watch?v=ejdOIJExdtI">Saba Halal Live Poultry</a>. During this time we were able to negotiate for the release of four individuals. Our next series of vigils will target Shun Da live market in South Warsaw. </p>
-          </div>
-
-        <h2>Rescues</h2>
-        <div class="about-save">
-          <p>After two successful vigils outside Saba Live Poultry, members of Warsaw Farmed Animal Save entered the slaughterhouse and asked Saba if we could take any sick or injured animals. A slaughterhouse worker agreed to release Liberty and Bella to us, and a few days later, Irene and Holly as well. They received immediate veterinary care for respiratory illness and sinus infections which had developed as a result of the horrible conditions in which they were kept at Saba.</p>
-          <p>Once inside their foster home, their personalities shined through as they started recovering in only a few short days. It quickly became apparent that they each had their own likes and dislikes, interests, and attitudes. All four chickens now live at <a href="http://www.ranchorelaxonj.org/">Rancho Relaxo</a> in New Jersey where they will live out the rest of their lives free from harm and exploitation. Read more about their rescue <a href="http://www.warsaw.com/warsaw/business/real_estate/meet-four-chickens-saved-from-a-slaughterhouse-by-warsaw-activists-20171224.html">here</a>.</p>
-          </div>
 
       </div>
 
       <div class="sidebar">
-        <h3>Upcoming Events</h3>
+        <h3>Nadchodzące wydarzenia</h3>
 
         {% for event in upcoming_events %}
           <div class="sidebar-event">
@@ -57,7 +53,7 @@
 
         {% if upcoming_events|length == 0 %}
         <div class="sidebar-event">
-          <h4>Sorry, no upcoming events! Check back soon!</h4>
+          <h4>Przepraszamy, brak nadchodzących wydarzeń! Sprawdź wkrótce!</h4>
         </div>
         {% endif %}
 

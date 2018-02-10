@@ -13,9 +13,10 @@
 <div class="home-content">
   <div class="home-events-and-text">
     <div id="calendar-head">
-      <h2 id="event-header">Upcoming Events</h2>
+      {# FIXME: Weird character?? and size#}
+      <h2 id="event-header">Nadchodzące wydarzenia</h2>
       <a href="/events" class="view-more">
-        <h3>View all</h3>
+        <h3>Wyświetl wszystko</h3>
       </a>
     </div>
 
@@ -31,7 +32,7 @@
                 <h3>{{ event.title }}</h3>
                 <h4>{% format_dates start=event.start_time end=event.end_time multiline="true" %}</h4>
                 <a href="{{ event.link }}" target="_blank" class="signup-button">
-                <h3>View details</h3>
+                <h3>Wyświetl szczegóły</h3>
               </a>
             </div>
           </div>
@@ -51,31 +52,19 @@
     </div>
 
     <div class="info-section">
-      <h2>Together, we can achieve animal liberation</h2>
-      <p>We believe that non-humans animals should be legally recognized as persons. We believe it is possible to achieve this in less than 40 years. We've set a goal to <strong>ban meat in Warsaw by 2033</strong>; it's mostly symbolic, but we do believe it will happen <em>if we all show up</em>.</p>
-      <p>We believe in a world where all sentient beings, human and non-human, are free from the bonds of oppression. We have seen throughout history groups of oppressed people overthrow their oppressors and take back their inalienable rights. Humans must be the ambassadors for non-human animals, whose interests are overlooked. We aim to speak on behalf of these animals and fight for their rights to be respected. <em>Animal liberation</em> is just a theoretic concept to some, but to us it is an inevitability.</p>
-      <p>Liberation Warsaw is dedicated to being a feminist and anti-racist organization, and follows non-hierarchical organizing principles. We encourage people from all walks of life to get involved and welcome new members to participate in the capacities they feel compelled.</p>
+      <h2>Razem możemy osiągnąć wyzwolenie zwierząt.</h2>
+      <p>Uważamy, że zwierzętom innym niż ludzie powinny być przyznane prawa do życia, wolności i zakazu stosowania tortur. Wierzymy, że uda się nam to osiągnąć do roku 2048. Minie wtedy 100 lat od uchwalenia powszechnej deklaracji praw człowieka. Jest to cel w dużej mierze symboliczny, ale wierzymy, że dokonamy tego, jeśli wszyscy stawimy się, aby walczyć o wyzwolenie zwierząt.</p>
+      <p>Wierzymy w świat, w którym wszystkie czujące istoty, ludzkie i nieludzkie, są wolne od ucisku. W przeszłości widzieliśmy grupy uciskanych ludzi obalających swoich ciemiężców i odzyskujących swoje niezbywalne prawa. Ponieważ zwierzęta nie potrafią stanąć w swojej obronie, to ludzie muszą być ich adwokatami. Chcemy wypowiadać się w imieniu tych zwierząt i walczyć o poszanowanie ich praw. Dla niektórych wyzwolenie zwierząt jest tylko pojęciem teoretycznym. Dla nas to misja.</p>
       <a href="/events" class="call-to-action-button">
-        <h3>Join the Movement</h3>
+        <h3>Dołącz do nas</h3>
       </a>
     </div>
 
     <div class="info-section">
-      <h2>Based on past social justice movements</h2>
-      <p>Unlike other animal rights groups, we operate using successful tactics of past social justice movements, and analyze history and social science to guide our actions and decisions. We use strategies that have a long history of raising societal consciousness, sparking conversation, and pushing silenced issues to the forefront of debate.</p>
-      <p>From Ghandi to Martin Luther King Jr. to Emmeline Pankhurst, non-violent direct action has proven to mobilize the masses across the world. This is the mobilization we are now creating for animal liberation.</p>
-      <a href="https://www.directactioneverywhere.com/direct-action-everywhere-evidence" target="_blank" class="call-to-action-button">
-        <h3>Learn More</h3>
-      </a>
-    </div>
-
-    <div class="info-section">
-      <h2>About Us</h2>
-      <p>Liberation Warsaw is an umbrella organization which also organizes for <a href="/save">Warsaw Farmed Animal Save</a> and the <a href="/anonymous">Warsaw chapter of Anonymous for the Voiceless</a>. We are a non-hierarchical, grassroots group which makes decisions based on consensus. We value transparency, emergent leadership, and amplifying marginalized voices. Liberation Warsaw has been operating in Warsaw since 2014 (previously under the name "DxE Warsaw").</p>
-      <p>We host a variety of activism events including monthly Days of Action, Vigils and Cubes of Truth, in addition to community building and education events, such as our monthly New Activist Orientation and animal volunteer days with various local sanctuaries.</p>
-      <a href="/about" class="call-to-action-button">
-        <h3>Our Tactics and Values</h3>
-      </a>
+      <h2>Nasza taktyka</h2>
+      <p>Liberation Warsaw jest organizacją feministyczną i antyrasistowską, która zbudowana jest na niehierarchicznej strukturze. Organizacja została powołana na skutek inspiracji grupą z Filadelfii funkcjonującej pod nazwą Liberation Philly. Zachęcamy ludzi z różnych środowisk do angażowania się oraz wykorzystywania swoich umiejętności i zdolności do rozwijania swojego aktywizmu.</p>
+      <p>Działamy wykorzystując skuteczne taktyki przeszłych ruchów działających na korzyść sprawiedliwości społecznej i analizujemy historię, aby kierować naszymi działaniami i decyzjami. Używamy strategii, które mają długą historię podnoszenia świadomości społecznej, wywoływania dyskusji i wysuwania uciszanych kwestii na pierwszy plan.</p>
+      <p>Poczynając od Ghandiego przez Martina Luthera Kinga Jr., a na Emmeline Pankhurst kończąc, bezpośrednie działania bez użycia przemocy dowiodły, że mają moc mobilizowania mas na całym świecie. To jest mobilizacja, którą teraz tworzymy dla wyzwolenia zwierząt.</p>
     </div>
 
   </div>

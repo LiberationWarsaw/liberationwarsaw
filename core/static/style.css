@@ -52,7 +52,7 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Viga', sans-serif;
+  font-family: 'Arial', sans-serif;
   letter-spacing: 2px;
 }
 
@@ -117,7 +117,7 @@ nav ul {
   margin: 0px 50px;
   padding: 0px;
   width: 100%;
-  font-family: 'Viga', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 1.75vw;
 }
 
@@ -203,7 +203,7 @@ nav a.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Viga', sans-serif;
+  font-family: 'Arial', sans-serif;
   letter-spacing: 2px;
   color: white;
   text-transform: uppercase;
@@ -915,7 +915,7 @@ footer a.active {
 }
 
 .footer-tag {
-  font-family: 'Viga', sans-serif;
+  font-family: 'Arial', sans-serif;
   letter-spacing: 2px;
   font-size: 3vw;
   text-transform: uppercase;
